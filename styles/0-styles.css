@@ -1,0 +1,133 @@
+@import "normalize.css";
+@import "/styles/fonts/stylesheet.css";
+
+:root {
+	/* Accent colors */
+	--color-primary-accent: #FF6565;
+	--color-secondary-accent: #071629;
+
+	/* Text colors */
+	--text-color-light: #FFF;
+	--text-color-dark: #000;
+
+	/* Font Families */
+	--font-primary: 'Source Sans Pro';
+	--font-secondary: 'Spin Cycle OT';
+}
+
+/* GLOBAL
+	==================== */
+html, body {
+	width: 100%;
+}
+p {
+	font-weight: 400;
+	font-size: 1rem;
+}
+button {
+	font-family: var(--font-primary);
+	border: none;
+	border-radius: 5rem;
+	width: 10rem;
+	height: 3rem;
+	filter: drop-shadow(0px 0.2rem 1rem rgba(0, 0, 0, 0.5));
+}
+
+/* CUSTOM STYLES 
+	===================== */
+.accent_btn {
+	text-transform: uppercase;
+	background-color: var(--color-primary-accent);
+	color: var(--text-color-light);
+	margin: 40px auto;
+}
+.accent_btn:hover {
+	opacity: 0.9;
+}
+.subtitle {
+	font-weight: 500;
+}
+
+/* CONTAINER
+	===================== */
+.hero-container {
+	width: 1000px;
+	display: flex;
+	flex-direction: column;
+	padding: 0 1rem 0 1rem;
+}
+
+/* HEADER MENU
+	===================== */
+
+/* Header Container */
+.header-container {
+	display: flex;
+	align-items: center;
+	margin: 3rem auto;
+}
+@media screen and (max-width: 480px) {
+	.header-container {
+		display: block;
+		align-items: unset;
+	}
+	.header-hamburger {
+		width: 40px;
+		height: 24px;
+		display: inline-block;
+		position: relative;
+	}
+}
+
+/* Header Logo */
+.header-logo > img {
+	width: 160px;
+	height: 32px;
+}
+
+/* Header Menu (Menu Items) */
+.header-menu {
+	margin-left: auto;
+}
+.header-menu ul.header-nav-list {
+	display: flex;
+}
+.header-menu ul.header-nav-list li.nav-item + .nav-item {
+	padding-left: 1.5rem;
+}
+.header-menu ul.header-nav-list .nav-item .nav-link {
+	color: var(--text-color-light);
+	text-transform: lowercase;
+	font-weight: 500;
+}
+.header-menu ul.header-nav-list .nav-item .nav-link:hover {
+	color: var(--color-primary-accent);
+}
+@media screen and (max-width: 480px) {
+	.header-menu {
+		margin-left: unset;
+		display: none;
+	}
+}
+
+/* SECTIONS
+	========================= */
+/* Hero Section CSS */
+.hero-section {
+	background-image: url(../images/headphones_hero_1.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 800px;
+	display: flex;
+	justify-content: center;
+	color: var(--text-color-light);
+	text-align: center;
+}
+.hero-content {
+	max-width: 630px;
+	display: flex;
+	flex-direction: column;
+	margin-top: auto;
+	margin-bottom: 10rem;
+	align-self: center;
+}
