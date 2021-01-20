@@ -63,19 +63,58 @@ button {
 /* Header Container */
 .header-container {
 	display: flex;
+	justify-content: space-between;
 	align-items: center;
 	margin: 3rem auto;
+	flex-wrap: wrap;
+}
+input#menu-icon {
+	display: none;
+}
+
+/* Mobile Hamburger Icon */
+label.menu-icon {
+	display: none;
 }
 @media screen and (max-width: 480px) {
-	.header-container {
-		display: block;
-		align-items: unset;
-	}
-	.header-hamburger {
-		width: 40px;
-		height: 24px;
-		display: inline-block;
+	label.menu-icon {
+		cursor: pointer;
 		position: relative;
+		user-select: none;
+		display: flex;
+	}
+	.menu-icon .navicon {
+		background: white;
+		display: block;
+		width: 1rem;
+		height: 0.1rem;
+		position: relative;
+		transition: background .2s ease-out;
+	}
+	.menu-icon .navicon::before, .menu-icon .navicon::after {
+		content: "";
+		display: block;
+		width: 1.5rem;
+		height: 100%;
+		position: absolute;
+		background: var(--text-color-light);
+		transition: all .2s ease-out;
+	}
+	.menu-icon .navicon::before {
+      top: .5rem;
+    }
+    .menu-icon .navicon::after {
+      top: -.5rem;
+	}
+
+	input#menu-icon:checked ~ .menu-icon .navicon {
+		background: transparent;
+	}
+	input#menu-icon:checked ~ .menu-icon .navicon::before {
+		transform: rotate(-45deg);
+	}
+	input#menu-icon:checked ~ .menu-icon .navicon::after {
+		transform: rotate(45deg);
 	}
 }
 
@@ -103,10 +142,30 @@ button {
 .header-menu ul.header-nav-list .nav-item .nav-link:hover {
 	color: var(--color-primary-accent);
 }
+.header-logo {
+	margin-left: auto;
+	margin-right: auto;
+}
 @media screen and (max-width: 480px) {
 	.header-menu {
-		margin-left: unset;
 		display: none;
+		flex-basis: 100%;
+		justify-content: center;
+	}
+	.header-menu ul.header-nav-list {
+		flex-direction: column;
+	}
+	.header-menu ul.header-nav-list li.nav-item + .nav-item {
+		padding: unset;
+	}
+	.header-menu ul.header-nav-list li.nav-item:first-child {
+		margin-top: 3rem;
+	}
+	.header-menu ul.header-nav-list li.nav-item {
+		margin-bottom: 1rem;
+	}
+	input#menu-icon:checked ~ .header-menu {
+		display: flex;
 	}
 }
 
@@ -117,7 +176,7 @@ button {
 	background-image: url(../images/headphones_hero_1.jpg);
 	background-position: center;
 	background-size: cover;
-	height: 800px;
+	min-height: 800px;
 	display: flex;
 	justify-content: center;
 	color: var(--text-color-light);
