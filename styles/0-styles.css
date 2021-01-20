@@ -44,6 +44,9 @@ button {
 .accent_btn:hover {
 	opacity: 0.9;
 }
+.title {
+	font-size: 2rem;
+}
 .subtitle {
 	font-weight: 500;
 }
