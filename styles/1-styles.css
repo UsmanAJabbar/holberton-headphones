@@ -1,4 +1,5 @@
 @import "normalize.css";
+@import "/styles/fonts/stylesheet.css";
 
 :root {
 	/* Accent colors */
@@ -22,6 +23,7 @@ html, body {
 p {
 	font-weight: 400;
 	font-size: 1rem;
+	line-height: 1.7;
 }
 button {
 	font-family: var(--font-primary);
@@ -46,14 +48,18 @@ button {
 .title {
 	font-size: 2rem;
 }
+.title + .description {
+	margin: 3rem auto;
+}
 .subtitle {
 	font-weight: 500;
 }
-
-/* CONTAINER
-	===================== */
-
-
+.caption {
+	font-size: 1.2rem;
+	font-weight: bold;
+	font-style: normal;
+	padding: 1rem;
+}
 /* HEADER MENU
 	===================== */
 
@@ -171,12 +177,6 @@ label.menu-icon {
 /* SECTIONS
 	========================= */
 /* Hero Section CSS */
-.hero-container {
-	width: 1000px;
-	display: flex;
-	flex-direction: column;
-	padding: 0 1rem 0 1rem;
-}
 .hero-section {
 	background-image: url(../images/headphones_hero_1.jpg);
 	background-position: center;
@@ -187,11 +187,57 @@ label.menu-icon {
 	color: var(--text-color-light);
 	text-align: center;
 }
-.hero-content {
+.hero-section .hero-container {
+	width: 1000px;
+	display: flex;
+	flex-direction: column;
+	padding: 0 1rem 0 1rem;
+}
+.hero-section .hero-container .hero-content {
 	max-width: 630px;
 	display: flex;
 	flex-direction: column;
 	margin-top: auto;
-	margin-bottom: 10rem;
+	margin-bottom: 6rem;
 	align-self: center;
+}
+
+/* Work Section CSS */
+.work-section {
+	min-height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.work-section .work-container {
+	max-width: 1000px;
+	display: flex;
+	flex-direction: column;
+	padding: 6rem 1rem;
+}
+.work-section .work-container .work-content {
+	max-width: 630px;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+.work-section .work-container .work-icons {
+	max-width: 1000px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 1rem auto;
+}
+.work-section .work-container .work-icons [class^="holberton_school-icon-"] {
+	display: flex;
+	flex-direction: column;
+	max-width: 250px;
+	padding: 2rem 0 2rem auto;
+}
+.work-section .work-container .work-icons [class^="holberton_school-icon-"]::before {
+	font-size: 7rem;
+	color: var(--color-primary-accent);
+	margin-bottom: 1rem;
 }
