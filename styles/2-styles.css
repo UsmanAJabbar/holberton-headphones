@@ -1,0 +1,291 @@
+@import "normalize.css";
+@import "/styles/fonts/stylesheet.css";
+
+:root {
+	/* Accent colors */
+	--color-primary-accent: #FF6565;
+	--color-secondary-accent: #071629;
+
+	/* Text colors */
+	--text-color-light: #FFF;
+	--text-color-dark: #000;
+
+	/* Font Families */
+	--font-primary: 'Source Sans Pro';
+	--font-secondary: 'Spin Cycle OT';
+}
+
+/* GLOBAL
+	==================== */
+html, body {
+	width: 100%;
+}
+p {
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.7;
+}
+button {
+	font-family: var(--font-primary);
+	border: none;
+	border-radius: 5rem;
+	width: 10rem;
+	height: 3rem;
+	filter: drop-shadow(0px 0.2rem 1rem rgba(0, 0, 0, 0.5));
+}
+
+/* CUSTOM STYLES 
+	===================== */
+.accent_btn {
+	text-transform: uppercase;
+	background-color: var(--color-primary-accent);
+	color: var(--text-color-light);
+	margin: 40px auto;
+}
+.accent_btn:hover {
+	opacity: 0.9;
+}
+.title {
+	font-size: 2rem;
+}
+.title + .description {
+	margin: 3rem auto;
+}
+.subtitle {
+	font-weight: 500;
+}
+.caption {
+	font-size: 1.2rem;
+	font-weight: bold;
+	font-style: normal;
+	padding: 1rem;
+}
+/* HEADER MENU
+	===================== */
+
+/* Header Container */
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 3rem auto;
+	flex-wrap: wrap;
+}
+input#menu-icon {
+	display: none;
+}
+
+/* Mobile Hamburger Icon */
+label.menu-icon {
+	display: none;
+}
+@media screen and (max-width: 480px) {
+	label.menu-icon {
+		cursor: pointer;
+		position: relative;
+		user-select: none;
+		display: flex;
+	}
+	.menu-icon .navicon {
+		background: white;
+		display: block;
+		width: 1rem;
+		height: 0.1rem;
+		position: relative;
+		transition: background .2s ease-out;
+	}
+	.menu-icon .navicon::before, .menu-icon .navicon::after {
+		content: "";
+		display: block;
+		width: 1.5rem;
+		height: 100%;
+		position: absolute;
+		background: var(--text-color-light);
+		transition: all .2s ease-out;
+	}
+	.menu-icon .navicon::before {
+      top: .5rem;
+    }
+    .menu-icon .navicon::after {
+      top: -.5rem;
+	}
+
+	input#menu-icon:checked ~ .menu-icon .navicon {
+		background: transparent;
+	}
+	input#menu-icon:checked ~ .menu-icon .navicon::before {
+		transform: rotate(-45deg);
+	}
+	input#menu-icon:checked ~ .menu-icon .navicon::after {
+		transform: rotate(45deg);
+	}
+}
+
+/* Header Logo */
+.header-logo > img {
+	width: 160px;
+	height: 32px;
+}
+
+/* Header Menu (Menu Items) */
+.header-menu {
+	margin-left: auto;
+}
+.header-menu ul.header-nav-list {
+	display: flex;
+}
+.header-menu ul.header-nav-list li.nav-item + .nav-item {
+	padding-left: 1.5rem;
+}
+.header-menu ul.header-nav-list .nav-item .nav-link {
+	color: var(--text-color-light);
+	text-transform: lowercase;
+	font-weight: 500;
+}
+.header-menu ul.header-nav-list .nav-item .nav-link:hover {
+	color: var(--color-primary-accent);
+}
+.header-logo {
+	margin-right: auto;
+}
+@media screen and (max-width: 480px) {
+	.header-menu {
+		display: none;
+		flex-basis: 100%;
+		justify-content: center;
+	}
+	.header-menu ul.header-nav-list {
+		flex-direction: column;
+	}
+	.header-menu ul.header-nav-list li.nav-item + .nav-item {
+		padding: unset;
+	}
+	.header-menu ul.header-nav-list li.nav-item:first-child {
+		margin-top: 3rem;
+	}
+	.header-menu ul.header-nav-list li.nav-item {
+		margin-bottom: 1rem;
+	}
+	input#menu-icon:checked ~ .header-menu {
+		display: flex;
+	}
+	.header-logo {
+		margin-left: auto;
+	}
+}
+
+/* SECTIONS
+	========================= */
+/* Hero Section CSS */
+.hero-section {
+	background-image: url(../images/headphones_hero_1.jpg);
+	background-position: center;
+	background-size: cover;
+	min-height: 800px;
+	display: flex;
+	justify-content: center;
+	color: var(--text-color-light);
+	text-align: center;
+}
+.hero-section .hero-container {
+	width: 1000px;
+	display: flex;
+	flex-direction: column;
+	padding: 0 1rem 0 1rem;
+}
+.hero-section .hero-container .hero-content {
+	max-width: 630px;
+	display: flex;
+	flex-direction: column;
+	margin-top: auto;
+	margin-bottom: 6rem;
+	align-self: center;
+}
+
+/* Work Section CSS */
+.work-section {
+	min-height: 600px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.work-section .work-container {
+	max-width: 1000px;
+	display: flex;
+	flex-direction: column;
+	padding: 6rem 1rem;
+}
+.work-section .work-container .work-content {
+	max-width: 630px;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+.work-section .work-container .work-icons {
+	max-width: 1000px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 1rem auto;
+}
+.work-section .work-container .work-icons [class^="holberton_school-icon-"] {
+	display: flex;
+	flex-direction: column;
+	max-width: 250px;
+	padding: 2rem 0 2rem auto;
+}
+.work-section .work-container .work-icons [class^="holberton_school-icon-"]::before {
+	font-size: 7rem;
+	color: var(--color-primary-accent);
+	margin-bottom: 1rem;
+}
+
+/* Results Section CSS */
+.results-section {
+	background-image: url(../images/headphones_hero_2.jpg);
+	background-position: center;
+	background-size: cover;
+	min-height: 600px;
+	display: flex;
+	justify-content: center;
+	color: var(--text-color-light);
+	text-align: center;
+}
+.results-section .results-container {
+	max-width: 1000px;
+	display: flex;
+	flex-direction: column;
+	padding: 6rem 1rem;
+}
+.results-section .results-container .results-content {
+	max-width: 630px;
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+.results-section .results-container .results-icons {
+	max-width: 1000px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 1rem auto;
+}
+.results-section .results-container .results-icons .pentagon {
+	background-image: url(../images/pentagone.png);
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	height: 200px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-origin: content-box;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem;
+}
+.results-section .results-container .results-icons .pentagon .title + .description {
+	margin: 0;
+}
