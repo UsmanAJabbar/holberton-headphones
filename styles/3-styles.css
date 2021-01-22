@@ -157,7 +157,7 @@ label.menu-icon {
 		transition: all .2s ease-out;
 	}
 	.menu-icon .navicon::before {
-		top: .5rem;
+		top: .55rem;
 	}
 	.menu-icon .navicon::after {
 		top: -.5rem;
@@ -167,9 +167,11 @@ label.menu-icon {
 		background: transparent;
 	}
 	input#menu-icon:checked ~ .menu-icon .navicon::before {
+		transform-origin: left;
 		transform: rotate(-45deg);
 	}
 	input#menu-icon:checked ~ .menu-icon .navicon::after {
+		transform-origin: left;
 		transform: rotate(45deg);
 	}
 }
