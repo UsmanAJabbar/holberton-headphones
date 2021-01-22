@@ -1,3 +1,4 @@
+![Holberton-Headphones-Cover-Image UsmanJabbar.COM](https://github.com/UsmanGTA/holberton-headphones/blob/main/extras/Holberton-Headphones-Cover.jpg)
 # HTML/CSS - Holberton Headphones
 This project is a part of the Holberton School Specialization Curriculum.
 
