@@ -117,7 +117,6 @@ textarea::placeholder {
 	color: var(--color-secondary-accent);
 	font-weight: bold;
 }
-
 /* HEADER MENU
 	===================== */
 
@@ -291,18 +290,21 @@ label.menu-icon {
 }
 
 /* Footer CSS */
+#copyright {
+	color: var(--color-grey);
+}
 .footer {
 	min-height: 250px;
 	background-color: var(--color-secondary-accent);
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 }
-.footer svg {
-	fill: var(--text-color-light);
-}
-.footer svg:hover {
-	fill: var(--color-primary-accent);
+.footer [class^="holberton_school-icon-"],
+.footer [class*=" holberton_school-icon-"] {
+	color: var(--text-color-light);
+	font-size: 2rem;
 }
 .footer .footer-container {
 	width: 1000px;
@@ -320,9 +322,13 @@ label.menu-icon {
 	color: var(--color-primary-accent);
 }
 @media screen and (max-width: 480px) {
+	.footer .footer-container {
+		justify-content: center;
+	}
 	.footer .footer-container #cta_icons {
 		flex-basis: 100%;
 		display: flex;
 		justify-content: center;
+		margin: 2rem auto;
 	}
 }
