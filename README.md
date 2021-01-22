@@ -1,23 +1,26 @@
 # HTML/CSS - Holberton Headphones
 This project is a part of the Holberton School Specialization Curriculum.
 
-On this project, we were offered a concept design file created in Figma where we were required to replicate a mockup design in HTML and CSS exclusively. The Figma mockup sketch could be found in the footer of this README.
+On this project, we were offered a concept design file created in Figma where we were required to replicate a mockup design in HTML and CSS exclusively. The Figma mockup sketch could be found in the extras folder.
 
 ## Overview / Notes:
 - The mandatory section of the curriculum is broken down into five seperate sections, progessively adding a new section with each iteration of the index.html file.
-    - Hero container Section
-	    - Refer to 0-index.html.
+    - Hero Section
 	- Work Section
-	    - Refer to 1-index.html.
 	- Results Section
-	    - Refer to 2-index.html.
     - Contact Us Section
-	    - Refer to 3-index.html.
 	- Footer Section
-	    - Refer to 4-index.html.
 - The project has all of its html files located in the root of the repository. Meanwhile, the required dependencies such as CSS stylesheets as well as fonts are located in the /styles, /images and /fonts directories.
 - The overall structure is being handled by three seperate classes defined in the CSS file, called .section, .container, as well as .content. Furthermore, a number of native HTML tags were stylized to ensure consistency between all of the sections.
+
 ```
+/* Section/Container Variables */
+:root {
+	/* Content Width */
+	--min-height-section: 600px;
+	--max-width-container: 1000px;
+	--max-width-content: 630px;
+}
 /* Highlight Code */
 .section {
 	min-height: var(--min-height-section);

@@ -1,0 +1,2 @@
+# Extras - Holberton Headphones
+This folder may contain additional files that may have not been necessary for the main project. Files that you may find here include concept files, cover images, READMEs and more.
