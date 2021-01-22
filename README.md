@@ -53,6 +53,7 @@ holberton-headphones/.
 │   2-index.html
 │   3-index.html
 │   4-index.html
+│   Holberton-School-Headphones-Figma-Concept.fig
 │   README.md
 │
 ├───images
@@ -94,4 +95,4 @@ holberton-headphones/.
 ```
 
 ## Author
-- Usman Abdul Jabbar Shaikh (hi[at]usmanjabbar.com)
+- Usman Abdul Jabbar Shaikh (hi[at]usmanjabbar.com | usmanjabbar.com)
