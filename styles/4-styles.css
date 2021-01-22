@@ -300,6 +300,7 @@ label.menu-icon {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	padding: 0 5rem;
 }
 .footer [class^="holberton_school-icon-"],
 .footer [class*=" holberton_school-icon-"] {
