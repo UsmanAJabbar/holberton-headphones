@@ -17,6 +17,30 @@ On this project, we were offered a concept design file created in Figma where we
 	    - Refer to 4-index.html.
 - The project has all of its html files located in the root of the repository. Meanwhile, the required dependencies such as CSS stylesheets as well as fonts are located in the /styles, /images and /fonts directories.
 - The overall structure is being handled by three seperate classes defined in the CSS file, called .section, .container, as well as .content. Furthermore, a number of native HTML tags were stylized to ensure consistency between all of the sections.
+```
+/* Highlight Code */
+.section {
+	min-height: var(--min-height-section);
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+.container {
+	/* Applies to all containers except header-container */
+	max-width: var(--max-width-container);
+	display: flex;
+	flex-direction: column;
+	padding: 6rem 1rem; 
+}
+.content {
+	max-width: var(--max-width-content);
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+}
+```
 - To aid further development, a number of variables were also used allowing the website to be colorized over time and updated overtime. Variables that control the accent colors of the website, as well as the height and widths of each and class mentioned above.
 - By the end of the project all of the navbar menu links scroll to their respective sections.
 - To ensure a touch of finesse, ensured smooth scrool's present on all of the files.
