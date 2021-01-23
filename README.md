@@ -46,7 +46,7 @@ On this project, we were offered a concept design file created in Figma where we
 ```
 - To aid further development, a number of variables were also used allowing the website to be colorized over time and updated overtime. Variables that control the accent colors of the website, as well as the height and widths of each and class mentioned above.
 - By the end of the project all of the navbar menu links scroll to their respective sections.
-- To ensure a touch of finesse, ensured smooth scrool's present on all of the files.
+- To ensure a touch of finesse, ensured smooth scroll's present on all of the files.
 
 ## Author
 - Usman Abdul Jabbar Shaikh (hi[at]usmanjabbar.com | usmanjabbar.com)
